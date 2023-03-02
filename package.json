@@ -1,5 +1,6 @@
 {
-  "name": "app-playground",
+  "name": "wise-api-client",
+  "author": "Serhii Lypko",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -30,6 +31,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "6.0.0-beta.2",
+    "swr": "2.0.3",
     "use-count-up": "3.0.1"
   },
   "devDependencies": {
