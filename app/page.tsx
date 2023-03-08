@@ -10,7 +10,7 @@ export default async function Page() {
     <section className="pt-2">
       <ul>
         {data.map((pair: WordPairType) => (
-          <li key={pair.id} className="mb-8">
+          <li key={pair.id} className="mb-10">
             <WordPair pair={pair} blind="ru" />
           </li>
         ))}

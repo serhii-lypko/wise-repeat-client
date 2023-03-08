@@ -22,13 +22,11 @@ export default async function Page() {
   );
 }
 
-// TODO: make request (and add endpoint) to query isLearned: true
 async function getData() {
   try {
-    const res = await fetch('http://wr-api.sl-tech-playground.com');
+    const res = await fetch('http://wr-api.sl-tech-playground.com/learned');
     return res.json();
   } catch (err) {
     console.log('error', err);
-    console.log('--------------------');
   }
 }

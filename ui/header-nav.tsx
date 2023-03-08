@@ -18,7 +18,7 @@ export function HeaderNav() {
       </Link>
 
       <nav>
-        <GlobalNavItem href="pairs" name="Pairs" className="mr-3" />
+        <GlobalNavItem href="create" name="Create" className="mr-3" />
         <GlobalNavItem href="learned" name="Learned" />
       </nav>
     </header>

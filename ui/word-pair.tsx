@@ -20,9 +20,9 @@ export default function WordPair({ pair }: Props) {
 
   return (
     <div onClick={toggleVisibility} className="flex w-full justify-between">
-      <span className="capitalize">{pair.eng}</span>
+      <span className="text-lg capitalize">{pair.eng}</span>
       <span
-        className={clsx('capitalize', {
+        className={clsx('text-lg capitalize', {
           invisible: !revealed,
         })}
       >
