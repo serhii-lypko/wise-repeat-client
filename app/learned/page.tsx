@@ -24,7 +24,7 @@ export default async function Page() {
 
 async function getData() {
   try {
-    const res = await fetch('http://wr-api.sl-tech-playground.com/learned');
+    const res = await fetch('https://wr-api.sl-tech-playground.com/learned');
     return res.json();
   } catch (err) {
     console.log('error', err);

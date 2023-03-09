@@ -6,6 +6,8 @@ import WordPair from '#/ui/word-pair';
 export default async function Page() {
   const data = await getData();
 
+  console.log(data);
+
   return (
     <section className="pt-2">
       <ul>
@@ -21,7 +23,10 @@ export default async function Page() {
 
 async function getData() {
   try {
-    const res = await fetch('http://wr-api.sl-tech-playground.com');
+    const res = await fetch('https://wr-api.sl-tech-playground.com', {
+      next: { revalidate: 10 },
+    });
+
     return res.json();
   } catch (err) {
     console.log('error', err);

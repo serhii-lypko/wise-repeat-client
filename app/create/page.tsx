@@ -14,7 +14,7 @@ export default function Page() {
     event.preventDefault();
 
     try {
-      await axios.post('http://wr-api.sl-tech-playground.com/create', {
+      await axios.post('https://wr-api.sl-tech-playground.com/create', {
         eng,
         ru,
       });
