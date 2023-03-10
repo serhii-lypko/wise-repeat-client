@@ -5,13 +5,12 @@ import WordPair from '#/ui/word-pair';
 
 export default async function Page() {
   const data = await getData();
-
-  console.log(data);
+  const dataToRender = data.filter((pair: WordPairType) => !pair.isLearned);
 
   return (
     <section className="pt-2">
       <ul>
-        {data.map((pair: WordPairType) => (
+        {dataToRender.map((pair: WordPairType) => (
           <li key={pair.id} className="mb-10">
             <WordPair pair={pair} blind="ru" />
           </li>
@@ -24,7 +23,7 @@ export default async function Page() {
 async function getData() {
   try {
     const res = await fetch('https://wr-api.sl-tech-playground.com', {
-      next: { revalidate: 10 },
+      next: { revalidate: 5 },
     });
 
     return res.json();
